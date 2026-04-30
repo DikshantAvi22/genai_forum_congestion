@@ -1,0 +1,32 @@
+% Minimal repo-local NeurIPS-style scaffold for compilation in this workspace.
+% Replace with the official neurips_2021.sty if your course requires the exact file.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2021}[2021/01/01 Minimal NeurIPS-style package]
+
+\RequirePackage{geometry}
+\RequirePackage{natbib}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage{setspace}
+
+\newif\if@neuripsfinal
+\DeclareOption{final}{\@neuripsfinaltrue}
+\ProcessOptions\relax
+
+\geometry{letterpaper,margin=1in}
+\setstretch{1.02}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{0.6em}{}
+\AtBeginDocument{
+  \if@neuripsfinal
+  \else
+    \date{}
+  \fi
+}
