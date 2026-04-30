@@ -7,6 +7,7 @@ The project studies a simple question: when should a GenAI system answer directl
 ## Repository Layout
 
 ```text
+report/         Final standalone report PDF
 sim/            Core simulator, policy definitions, and experiment runner
 README.md       Project overview
 ```
@@ -17,6 +18,10 @@ Key code files:
 - `sim/model.py`
 - `sim/policies.py`
 - `sim/models/reduced_form.py`
+
+Final report:
+
+- `report/dikshantg_124108_parasraina_124170_GT_2026.pdf`
 
 ## Setup
 
@@ -41,7 +46,7 @@ python sim/run_experiments.py --mode full
 
 ## Scope
 
-This is a compact research code repository. It keeps the simulator and policy logic, while large manuscript, presentation, and generated artifact directories have been removed from version control.
+This is a compact research code repository. It keeps the simulator and policy logic, plus the final standalone report PDF. Large manuscript, presentation, and generated artifact directories have been removed from version control.
 
 ## Authors
 
